@@ -80,16 +80,54 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $request->validate(
+            [
+                'name' => 'required',
+                'email' => 'required|email|unique:users,email,' . $id,
+                'photo' => 'mimes:png,jpeg,jpg|max:2048',
+            ]
+        );
+        $update = User::findOrFail($id);
+        $update->name = $request->name;
+        $update->email = $request->email;
+ 
+        if ($request->hasfile('photo')) {
+            $filePath = public_path('uploads');
+            $file = $request->file('photo');
+            $file_name = time() . $file->getClientOriginalName();
+            $file->move($filePath, $file_name);
+            // delete old photo
+            if (!is_null($update->photo)) {
+                $oldImage = public_path('uploads/' . $update->photo);
+                if (File::exists($oldImage)) {
+                    unlink($oldImage);
+                }
+            }
+            $update->photo = $file_name;
+        }
+ 
+        $result = $update->save();
+        Session::flash('success', 'User updated successfully');
+        return redirect()->route('user.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request)
     {
-        //
+        $userData = User::findOrFail($request->user_id);
+        $userData->delete();
+        // delete photo if exists
+        if (!is_null($userData->photo)) {
+            $photo = public_path('uploads/' . $userData->photo);
+            if (File::exists($photo)) {
+                unlink($photo);
+            }
+        }
+        Session::flash('success', 'User deleted successfully');
+        return redirect()->route('user.index');
     }
 }

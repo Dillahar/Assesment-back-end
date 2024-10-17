@@ -29,7 +29,7 @@
                             <label for="imageUpload"></label>
                         </div>
                         <div class="avatar-preview">
-                            <div id="imagePreview" style="@if (isset($edit->id) && $edit->photo != '') background-image:url('{{ url('/img/avatar.jpg') }}/uploads/{{ $edit->photo }}')@else background-image: url('{{ url('/img/avatar.jpg') }}') @endif"></div>
+                            <div id="imagePreview" style="@if (isset($edit->id) && $edit->photo != '') background-image:url('{{ url('/') }}/uploads/{{ $edit->photo }}')@else background-image: url('{{ url('/img/avatar.jpg') }}') @endif"></div>
                         </div>
                     </div>
                     @error('photo')
