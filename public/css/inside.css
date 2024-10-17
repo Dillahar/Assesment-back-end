@@ -1,0 +1,129 @@
+.nav-text-style {
+    color: #797979 !important;
+    text-align: center;
+    font-size: 18px !important;
+    font-style: normal;
+    font-weight: 600 !important;
+    line-height: normal;
+}
+.sub-menu-text-style {
+    color: #1B1B1B;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 133.333% */
+    letter-spacing: 0.12px;
+}
+
+.nav-text-style:hover {
+    text-decoration: none;
+    color: #2466AB !important;
+}
+
+.nav-text-style:active {
+    text-decoration: none;
+    color: #2466AB !important;
+}
+
+.nav-active {
+    color: #2466AB !important
+}
+
+.sub-menu {
+    color: #1B1B1B;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.12px;
+}
+
+.dropdown-menu {
+	min-width: 200px;
+}
+.dropdown-menu.columns-2 {
+	min-width: 400px;
+}
+.dropdown-menu.columns-3 {
+	min-width: 600px;
+}
+.dropdown-menu li a {
+	padding: 5px 15px;
+	font-weight: 300;
+}
+.multi-column-dropdown {
+	list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.multi-column-dropdown li a {
+	display: block;
+	clear: both;
+	line-height: 1.428571429;
+	color: #333;
+	white-space: normal;
+}
+.multi-column-dropdown li a:hover {
+	text-decoration: none;
+	color: #262626;
+	background-color: #999;
+}
+ 
+@media (max-width: 767px) {
+	.dropdown-menu.multi-column {
+		min-width: 240px !important;
+		overflow-x: hidden;
+	}
+}
+
+.subtitle-home{
+    color: #4D4D4D;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 160% */
+    letter-spacing: 0.1px;
+}
+.gradient-course {
+    background: linear-gradient(180deg, #1D62A9 0%, #88D6C5 100%);
+}
+
+.subtitle-course-detail {
+    color: #796667;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.price-tag{
+    color: #2466AB;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 100% */
+}
+
+.my-course{
+    color: #797979;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.custom-card {
+    background-color: #FFFFFF; /* Replace with your desired color */
+    border: 1px solid #ddd; /* Adjust color and width as needed */
+    border-radius: 0.25rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 1rem; /* Spacing between cards */
+}
+.custom-card h5 {
+    color: #333; /* Text color */
+}
+.custom-card p {
+    color: #666; /* Text color */
+}

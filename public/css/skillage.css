@@ -1,0 +1,37 @@
+.bg-gradient-skillage {
+    background-color: #031F47;
+    background-color: linear-gradient(180deg, #031F47 10%, #D9D9D9 100%);
+    background-size: cover;
+}
+.btn-primary:hover {
+    background-color: #2466AB !important;
+    border-color: #2466AB !important;
+}
+
+.row{
+    --bs-gutter-x: 0rem !important;
+}
+
+.logres-column {
+    padding: 80px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between !important;
+    flex-direction: column !important;
+    background-color: #031F47;
+}
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.logres-header {
+    font-size: 40px;
+    font-weight: 200 !important;
+}
+
+.register-slogan {
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 10;
+    line-height: 120%;
+}
