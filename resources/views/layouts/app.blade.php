@@ -7,7 +7,7 @@
 
     <title>{{ isset($title) ? $title . ' - ' . config('app.name') : config('app.name') }}</title>
 
-    <link id="pagestyle" href="{{ asset('css/app.css?v=546') }}" rel="stylesheet" />
+    <link id="pagestyle" href="{{ asset('/css/app.css?v=546') }}" rel="stylesheet" />
     <link id="pagestyle" href="{{asset("css/inside.css")}}" rel="stylesheet"/>
     <link rel="icon" href="{{asset('img/logo/skillage-3d-logo.png')}}" type="image/x-icon" sizes="16x12">
     @stack('styles')

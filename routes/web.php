@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\admin\DashboardController as AdminDashboard;
 
 Route::get('/', function () {
     return view('welcome');
@@ -41,4 +43,8 @@ Route::group(['prefix' => 'admin/user'], function () {
     Route::get('/edit/{id}', [UserController::class, 'edit'])->name('user.edit');
     Route::post('/update/{id}', [UserController::class, 'update'])->name('user.update');
     Route::post('/delete', [UserController::class, 'destroy'])->name('user.delete');
+    Route::get('dashboard', \App\Livewire\Admin\Dashboard::class)->name('dashboard');
 });
+
+// Route::get('/dashboard', [AdminDashboard::class, 'index'])->name('users');
+

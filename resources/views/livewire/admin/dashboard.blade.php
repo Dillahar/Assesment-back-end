@@ -21,7 +21,7 @@
                             <div class="numbers">
                                 <p class="mb-0 text-capitalize font-weight-bold "> Total Users</p>
                                 <h5 class="font-weight-bolder   mt-4 ">
-                                    {{ $totalUsers }}
+                                    \
                                 </h5>
                             </div>
                         </div>
@@ -52,7 +52,7 @@
                             <div class="numbers">
                                 <p class="mb-0 text-capitalize font-weight-bold">Total Courses</p>
                                 <h5 class="font-weight-bolder mt-4">
-                                    {{ $totalCourses }}
+                                    \
                                 </h5>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                             <div class="numbers">
                                 <p class="mb-0 text-capitalize font-weight-bold">Total Modules</p>
                                 <h5 class="font-weight-bolder mt-4 ">
-                                    {{ $totalModules }}
+                                
                                 </h5>
                             </div>
                         </div>
@@ -117,7 +117,7 @@
                                 <p class="mb-0   font-weight-bold">Total Orders</p>
 
                                 <h5 class="font-weight text-white-bolder mt-4">
-                                    {{ $totalOrders }}
+                                
                                 </h5>
                             </div>
                         </div>
@@ -167,39 +167,32 @@
                         <table class="table align-items-center mb-0">
                             <tbody>
 
-                                @foreach ($recentStudents as $user)
+                                
                                     <tr>
                                         <td>
                                             <div class="d-flex mb-1">
                                                 <div>
-                                                    @if ($user->photo)
-                                                        <img src="{{ $user->photo_url }}"
+                                                    
+                                                        <img src=""
                                                             class="avatar avatar-md rounded-circle  shadow-sm">
-                                                    @else
+                                                    
                                                         <div
                                                             class="avatar avatar-md rounded-circle bg-info-light border-radius-md ">
                                                             <h6 class="text-info-light text-uppercase mt-1">
-                                                                {{ $user->name[0] }}</h6>
-                                                        </div>
-                                                    @endif
-
+                                                                </h6>
+                                                        </div>                                                  
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center ms-3">
-                                                    <h6 class="mb-0">{{ $user->name }}</h6>
+                                                    <h6 class="mb-0"></h6>
 
-                                                    <p class=" text-sm text-muted mb-0">{{ $user->email }}</p>
+                                                    <p class=" text-sm text-muted mb-0"></p>
                                                 </div>
                                             </div>
                                         </td>
-
                                     </tr>
-                                @endforeach
                             </tbody>
                         </table>
                     </div>
-
-
-
                 </div>
             </div>
         </div>
@@ -208,14 +201,13 @@
                 <div class="card-header border-bottom">
                     <div class="d-flex justify-content-between">
                         <h6 class="mb-0 text-capitalize">Recent Orders</h6>
-                        <a href="{{ route('orders') }}"
+                        <a href=""
                             class="btn  bg-purple-light text-purple shadow-none mb-0 ms-2 d-flex align-items-center justify-content-center"
                             data-bs-toggle="tooltip" data-bs-placement="bottom" title=""
                             data-bs-original-title="">
                             View All
                         </a>
                     </div>
-
                 </div>
                 <div class="card-body">
 
@@ -234,43 +226,43 @@
 
                             <tbody>
 
-                                @foreach ($recentOrders as $order)
+                                
                                     <tr>
                                         <td>
                                             <div class="d-flex">
                                                 <div>
-                                                    @if (isset($order->user->photo))
-                                                        <img src="{{ $order->user->photo_url }}"
+                                                  
+                                                        <img src=""
                                                             class="avatar avatar-md rounded-circle  shadow-sm">
-                                                    @else
+                                            
                                                         <div
                                                             class="avatar avatar-md rounded-circle bg-info-light border-radius-md ">
                                                             <h6 class="text-info-light text-uppercase mt-1">
-                                                                {{ $order->user->name[0] }}</h6>
+                                                                </h6>
                                                         </div>
-                                                    @endif
+                                  
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center ms-3">
-                                                    <h6 class="mb-0">{{ $order->user->name }}</h6>
+                                                    <h6 class="mb-0"></h6>
 
-                                                    <p class=" text-sm text-muted mb-0">{{ $order->user->email }}</p>
+                                                    <p class=" text-sm text-muted mb-0"</p>
                                                 </div>
                                             </div>
                                         </td>
 
                                         <td class="align-middle text-start">
                                             <span class="">
-                                                @rupiah($order->total)
+                                             
                                             </span>
                                         </td>
                                         <td class="align-middle text-start">
                                             <span class="">
-                                                {{ \App\Utils\DateSupport::parse($order->created_at)->format(config('app.date_format')) }}
+                                                
                                             </span>
                                         </td>
                                         <td class="align-middle text-right">
                                             <a class=" btn bg-purple-light text-purple btn-icon-only  shadow-none"
-                                                href="{{ route('orders.edit', $order->id) }}">
+                                                href="">
 
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -285,7 +277,7 @@
 
                                         </td>
                                     </tr>
-                                @endforeach
+                                
 
                             </tbody>
                         </table>
